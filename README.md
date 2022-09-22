@@ -1,18 +1,26 @@
 # **:zap: React-Weather 템플릿**
-## **:zap: 카카오 개발자 사이트에서 계정 정보 생성하기**
-우선 카카오 개발자 사이트에 접속하여 계정을 만들고 로그인 합니다.
-https://developers.kakao.com/
+## **:tada: 카카오 개발자 사이트에서 계정 정보 생성하기**
+![다운로드 (1)](https://user-images.githubusercontent.com/95972251/191654315-35e73a4d-9208-449d-8b1f-10af6d04868f.png)
 
-:pushpin: 메인 화면의 상단 메뉴 중 "내 애플리케이션"을 선택합니다.<br />
-:pushpin: 내 애플리케이션에서 "애플리케이션 추가하기"를 선택합니다.<br />
-:pushpin: 앱 아이콘, 앱 이름, 사업자명을 입력하고 저장합니다.<br />
-:pushpin: 저장이 완료되면 요약 정보 페이지에 생성된 "앱 키"가 보입니다.<br />
-:pushpin: 플랫폼 메뉴의 "Web플랫폼 등록"을 선택합니다.<br />
-:pushpin: 사이트 도메인을 입력한 후 저장합니다.<br />
-:pushpin: Web 사이트 도메인이 등록된 것을 볼 수 있습니다.<br />
-:pushpin: 여기서 삭제나 수정등을 하실 수 있습니다.<br />
+:pushpin: 우선 <a href="https://developers.kakao.com/">카카오 개발자 사이트</a>에 접속하여 계정을 만들고 로그인 합니다.
 
-## **:zap: 리액트 프로젝트 수정사항들**
+:one: 메인 화면의 상단 메뉴 중 "내 애플리케이션"을 선택합니다.<br />
+
+:two: 내 애플리케이션에서 "애플리케이션 추가하기"를 선택합니다.<br />
+
+:three: 앱 아이콘, 앱 이름, 사업자명을 입력하고 저장합니다.<br />
+
+:four: 저장이 완료되면 요약 정보 페이지에 생성된 "앱 키"가 보입니다.<br />
+
+:five: 플랫폼 메뉴의 "Web플랫폼 등록"을 선택합니다.<br />
+
+:six: 사이트 도메인을 입력한 후 저장합니다.<br />
+
+:seven: Web 사이트 도메인이 등록된 것을 볼 수 있습니다.<br />
+
+:eight: 여기서 삭제나 수정등을 하실 수 있습니다.<br />
+
+## **:confetti_ball: 리액트 프로젝트 수정사항들**
 - 우선 리액트 프로젝트를 생성합니다.
 
 ```bash
@@ -101,6 +109,8 @@ export default App;
   border-color: #D8D8D8;
 }
 ```
+## **:dart: 완성화면**
+![다운로드](https://user-images.githubusercontent.com/95972251/191654356-84a8ece3-eef9-48c5-96b0-607b8f80da7b.png)
 
 - 지도의 좌표는 <a href="https://tablog.neocities.org/keywordposition.html">URL</a>에서 찾으시면 됩니다.
 
