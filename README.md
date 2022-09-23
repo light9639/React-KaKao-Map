@@ -110,7 +110,7 @@ export default App;
   border-color: #D8D8D8;
 }
 ```
-## **:dart: 완성화면**
+## **🗺️ 완성화면**
 ![다운로드](https://user-images.githubusercontent.com/95972251/191654356-84a8ece3-eef9-48c5-96b0-607b8f80da7b.png)
 
 - 지도의 좌표는 <a href="https://tablog.neocities.org/keywordposition.html">URL</a>에서 찾으시면 됩니다.
