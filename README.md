@@ -1,5 +1,9 @@
 # **:zap: React-Map 템플릿**
-**:sparkles: <a href="https://light9639.github.io/React-Map/">React-Weather 템플릿</a> :sparkles:**
+:octocat: 바로가기 https://light9639.github.io/React-Map/<br />
+
+<img src="https://react-kakao-maps-sdk.jaeseokim.dev/img/undraw_Map_dark_re_36sy.svg" width="300px" />
+
+**:sparkles: React-Weather 템플릿 :sparkles:**
 ## **:tada: 카카오 개발자 사이트에서 계정 정보 생성하기**
 ![다운로드 (1)](https://user-images.githubusercontent.com/95972251/191654315-35e73a4d-9208-449d-8b1f-10af6d04868f.png)
 
@@ -17,9 +21,7 @@
 
 :six: 사이트 도메인을 입력한 후 저장합니다.<br />
 
-:seven: Web 사이트 도메인이 등록된 것을 볼 수 있습니다.<br />
-
-:eight: 여기서 삭제나 수정등을 하실 수 있습니다.<br />
+:seven: Web 사이트 도메인이 등록된 것을 볼 수 있습니다. 이 페이지에서 삭제나 수정을 할 수 있습니다.<br />
 
 ## **:confetti_ball: 리액트 프로젝트 수정사항들**
 - 우선 리액트 프로젝트를 생성합니다.
