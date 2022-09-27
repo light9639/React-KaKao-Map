@@ -1,7 +1,7 @@
 # **:zap: React-Map 템플릿**
 :octocat: 바로가기 https://light9639.github.io/React-Map/<br />
 
-<img src="https://react-kakao-maps-sdk.jaeseokim.dev/img/undraw_Map_dark_re_36sy.svg" width="300px" />
+<img src="https://react-kakao-maps-sdk.jaeseokim.dev/img/undraw_Map_dark_re_36sy.svg" width="400px" />
 
 **:sparkles: React-Weather 템플릿 :sparkles:**
 ## **:tada: 카카오 개발자 사이트에서 계정 정보 생성하기**
