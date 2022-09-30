@@ -26,92 +26,92 @@
 ## **:confetti_ball: 리액트 프로젝트 수정사항들**
 - 우선 리액트 프로젝트를 생성합니다.
 
-```bash
-npx create-react-app kakaomap
-```
+  ```bash
+  npx create-react-app kakaomap
+  ```
 
 - index.html의 head에 다음 내용을 추가합니다.
 
-```bash
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; script-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; img-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net;">
-<meta http-equiv="X-Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; script-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; img-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net;">
+  ```bash
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; script-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; img-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net;">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; script-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net; img-src 'self' 'unsafe-inline' https://dapi.kakao.com http://*.daumcdn.net;">
 
-<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=발급받은키"></script>
-```
+  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=발급받은키"></script>
+  ```
 - App.js를 다음과 같이 수정합니다.
 
-```bash
+  ```bash
 
-import './App.css';
-import { useEffect } from 'react';
+  import './App.css';
+  import { useEffect } from 'react';
 
-function App() {
+  function App() {
 
-  //스크립트 파일 읽어오기
-  const new_script = src => {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = src;
-      script.addEventListener('load', () => {
-        resolve();
-      });
-      script.addEventListener('error', e => {
-        reject(e);
-      });
-      document.head.appendChild(script);
-    });
-  };
-
-  useEffect(() => {
-    //카카오맵 스크립트 읽어오기
-    const my_script = new_script('https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=발급받은키');
-
-    //스크립트 읽기 완료 후 카카오맵 설정
-    my_script.then(() => {
-      console.log('script loaded!!!');
-      const kakao = window['kakao'];
-      kakao.maps.load(() => {
-        const mapContainer = document.getElementById('map');
-        const options = {
-          center: new kakao.maps.LatLng(37.56000302825312, 126.97540593203321), //좌표설정
-          level: 3
-        };
-        const map = new kakao.maps.Map(mapContainer, options); //맵생성
-        //마커설정
-        const markerPosition = new kakao.maps.LatLng(37.56000302825312, 126.97540593203321);
-        const marker = new kakao.maps.Marker({
-          position: markerPosition
+    //스크립트 파일 읽어오기
+    const new_script = src => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.addEventListener('load', () => {
+          resolve();
         });
-        marker.setMap(map);
+        script.addEventListener('error', e => {
+          reject(e);
+        });
+        document.head.appendChild(script);
       });
-    });
-  }, []);
+    };
 
-  return (
-    <div className="App">
-      <div id="map" className="map"/>
-    </div>
-  );
-}
+    useEffect(() => {
+      //카카오맵 스크립트 읽어오기
+      const my_script = new_script('https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=발급받은키');
 
-export default App;
-```
+      //스크립트 읽기 완료 후 카카오맵 설정
+      my_script.then(() => {
+        console.log('script loaded!!!');
+        const kakao = window['kakao'];
+        kakao.maps.load(() => {
+          const mapContainer = document.getElementById('map');
+          const options = {
+            center: new kakao.maps.LatLng(37.56000302825312, 126.97540593203321), //좌표설정
+            level: 3
+          };
+          const map = new kakao.maps.Map(mapContainer, options); //맵생성
+          //마커설정
+          const markerPosition = new kakao.maps.LatLng(37.56000302825312, 126.97540593203321);
+          const marker = new kakao.maps.Marker({
+            position: markerPosition
+          });
+          marker.setMap(map);
+        });
+      });
+    }, []);
+
+    return (
+      <div className="App">
+        <div id="map" className="map"/>
+      </div>
+    );
+  }
+
+  export default App;
+  ```
 
 - App.css에 class를 추가합니다.
 
-```bash
-.map {
-  width: 100%;
-  height: 600px;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  border-width: medium;
-  border-color: #D8D8D8;
-}
-```
+  ```bash
+  .map {
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: medium;
+    border-color: #D8D8D8;
+  }
+  ```
 ## **🗺️ 완성화면**
 ![다운로드](https://user-images.githubusercontent.com/95972251/191654356-84a8ece3-eef9-48c5-96b0-607b8f80da7b.png)
 
