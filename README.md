@@ -1,4 +1,4 @@
-# **:zap: React-Map 템플릿**
+# 🗺️ React-Map 템플릿
 :octocat: 바로가기 https://light9639.github.io/React-Map/<br />
 
 <img src="https://react-kakao-maps-sdk.jaeseokim.dev/img/undraw_Map_dark_re_36sy.svg" width="400px" />
